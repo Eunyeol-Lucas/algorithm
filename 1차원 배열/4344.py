@@ -8,5 +8,4 @@ for i in range(num):
         if j > avg:
             cnt += 1
     rate = cnt/scores[0]*100
-    per = round(rate, 3)
-    print(per, "%")
+    print("{:.3f}%".format(rate))
