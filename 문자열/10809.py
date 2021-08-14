@@ -1,6 +1,6 @@
 import string
 word = input()
-alp = string.ascii_lowercase
+alphabet = string.ascii_lowercase
 
-for i in alp:
+for i in alphabet:
     print(word.find(i), end=' ')
