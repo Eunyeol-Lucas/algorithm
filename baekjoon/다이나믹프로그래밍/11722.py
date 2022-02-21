@@ -18,3 +18,8 @@ for i in range(N):
             break
 
 print(idx)
+
+'''
+6
+10 30 10 20 50 10
+'''
