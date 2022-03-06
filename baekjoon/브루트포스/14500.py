@@ -1,4 +1,7 @@
+# pypy3만 통과
+
 from sys import stdin
+
 
 # dfs 함수를 통해 인접한 행렬로 이동하며 3칸을 이동하게 되는 경우의 최대 합을 구함
 def dfs(x, y, L, total):
