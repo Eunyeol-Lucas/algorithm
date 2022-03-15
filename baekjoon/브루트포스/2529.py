@@ -48,3 +48,5 @@ def dfs(L):
 dfs(0)
 print(''.join(_list[-1]))
 print(''.join(_list[0]))
+
+

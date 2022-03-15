@@ -1,12 +1,11 @@
 import sys
-import copy
 from collections import deque
 input = sys.stdin.readline
 
 
 def bfs():
     global answer
-    tmp_graph = copy.deepcopy(graph)
+    tmp_graph = [row[:] for row in graph]
     deq = deque()
     cnt = 0
     for i in range(N):
