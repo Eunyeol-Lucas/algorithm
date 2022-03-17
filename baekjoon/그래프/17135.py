@@ -4,7 +4,7 @@ input = stdin.readline
 
 
 def attack(_list):  # 궁수의 공격
-    # 거리가 D 이하인 적 중 가장 가깝고, 적이 여러명일 경우 아장 왼쪽의 적을 공격
+    # 거리가 D 이하인 적 중 가장 가깝고, 적이 여러명일 경우 가장 왼쪽의 적을 공격
     target_list = []
     cnt = 0
     for i in _list:
@@ -32,7 +32,6 @@ def move():
     # 기존의 마지막 행은 전진하기 때문에 사라져야하는 행
     for i in range(-1, -N, -1):
         tmp[i] = tmp[i-1]
-
     tmp[0] = [0] * M
 
 
@@ -50,10 +49,10 @@ maps = [list(map(int, input().split())) for _ in range(N)]
 archer = [i for i in range(M)]
 archer_list = combinations(archer, 3)
 max_v = 0
-for i in archer_list:
+for i in archer_list: # 궁수 위치
     tmp = [_list[:] for _list in maps]
     count = 0
-    while not is_empty():
+    while not is_empty(): # 모든 공격수를 처리할때까지 반복
         count += attack(i)
         move()
     max_v = max(max_v, count)
