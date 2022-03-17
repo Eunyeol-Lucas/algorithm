@@ -8,9 +8,9 @@ def bit_mask():
             # 행 내 가로의 합
             row_sum = 0
             for c in range(M):
-                # 이차원 배열을 일렬로 늘렸을 때 인덱스의 위치 
-                idx = r * M + c # (r행 c열)
-                if i & (1 << idx): # 비트 연산이 1일 경우 행 내 가로의 합에 추가
+                # 이차원 배열을 일렬로 늘렸을 때 인덱스의 위치
+                idx = r * M + c  # (r행 c열)
+                if i & (1 << idx):  # 비트 연산이 1일 경우 행 내 가로의 합에 추가
                     row_sum = row_sum * 10 + arr[r][c]
                 else:
                     # 0일 경우, 세로의 합을 계산하므로 지금까지 나온 [행 내 가로의 합]을 total에 추가
