@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 # i, j 좌표에서 출발하여 중복되는 좌표 없이 순회하여 다시 i, j로 와야한다.
 def dfs(x, y, idx):
-    global flag, i, j
+    global flag
     # 순회 좌표 x, y가 i, j 이며 회전 방향이 0이 아닐때 flag를 1로 변경한뒤 return한다.
     if x == i and y == j and idx:
         flag = 1
