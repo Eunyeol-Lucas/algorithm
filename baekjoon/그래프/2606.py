@@ -3,22 +3,23 @@ input = stdin.readline
 
 N = int(input())
 P = int(input())
-arr = [list(map(int, input().split())) for _ in range(P)]
-graph = [[0] * (N+1) for _ in range(N+1)]
-vst = [[0] * N for _ in range(N)]
-for i in arr:
-    graph[i[0]][i[1]] = 1
-    graph[i[1]][i[0]] = 1
-
-answer = 0
-
-def dfs(L):
-    if L==P:
-        pass
-        return
-    else:
-        
-        pass
+graph = [[] for _ in range(N+1)]
+vst = [0] * (N+1)
+for i in range(P):
+    a, b = map(int, input().split())
+    graph[a].append(b)
+    graph[b].append(a)
+tmp = []
 
 
-dfs(0)
+def dfs(x):
+    for i in graph[x]:
+        if not vst[i]:
+            vst[i] = 1
+            tmp.append(i)
+            dfs(i)
+
+
+vst[1] = 1
+dfs(1)
+print(len(tmp))
